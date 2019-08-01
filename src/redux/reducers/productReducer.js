@@ -9,6 +9,7 @@ const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
 
 export function fetchAllProducts() {
     const data = fetch('/api/products').then(res => res.json());
+    // const data = axios.get('/api/products').then(res => res.data);
     return {
         type: FETCH_PRODUCTS,
         payload: data
